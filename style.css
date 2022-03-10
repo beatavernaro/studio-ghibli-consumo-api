@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*{
+	--roboto: 'Roboto', sans-serif;
+}
+
+body {
+	background: rgb(2,0,36);
+	background: linear-gradient(130deg, rgba(2,0,36,1) 0%, rgba(87,23,96,1) 42%, rgba(0,128,162,1) 100%);
+	margin: 0;
+	font-family: var(--roboto);
+}
+
+.cards-style{
+	height: 380px;
+}
+
+.box-shadow-cards{
+	box-shadow: rgba(255, 255, 255, 0.25) 0px 13px 27px -5px, rgba(255, 255, 255, 0.3) 0px 8px 16px -8px;
+	
+}
+.container {
+	padding: 40px;
+	margin: 0 auto;
+}
+
+h1 {
+	text-align: center;
+	font-size: 54px;
+}
+
+.card::after {
+	content: "";
+  display: block;
+  width: 50%;
+  height: 45%;
+  opacity: .7;
+  position: absolute;
+  top: 15%;
+  left: 25%;
+}
+
+.color{
+	color: white;
+}
+.card:hover {
+	animation: bounce 0.5s linear;
+}
+
+.card-title {
+	text-transform: capitalize;
+	z-index: 2;
+}
+
+.card-subtitle {
+	text-transform: capitalize;
+	margin-top: 5px;
+	color: #666;
+	font-weight: lighter;
+	z-index: 2;
+}
+
+.card-img{
+	max-height: fit-content;
+}
+
+@keyframes bounce {
+	20% {
+			transform: translateY(-6px);
+	}
+	40% {
+			transform: translateY(0px);
+	}
+
+	80% {
+			transform: translateY(-2px);
+	}
+	100% {
+			transform: translateY(0);
+	}
+}
